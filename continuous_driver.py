@@ -107,7 +107,7 @@ def runner():
         logging.info("Connection has been setup successfully.")
     except:
         logging.error("Connection has been refused by the server.")
-        ConnectionRefusedError
+        raise ConnectionRefusedError
     if train:
         env = CarlaEnvironment(client, world, town)
     else:
